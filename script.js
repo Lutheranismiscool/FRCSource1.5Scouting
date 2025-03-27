@@ -956,8 +956,8 @@ function generateMainPage(stage) {
             alert("String copied to clipboard")
         })
         qrBox.appendChild(qrText);
-/*QR QR QR QR QR QR QR QR QR RQ QR QR QR QR QR 
-        let qrBtn = document.createElement("button");
+//QR QR QR QR QR QR QR QR QR RQ QR QR QR QR QR 
+        /*let qrBtn = document.createElement("button");
         qrBtn.setAttribute("id", "qrBtn");
         qrBtn.innerHTML = "continue";
         qrBtn.addEventListener("click", () => clickEvt("transition", null, null))
@@ -965,7 +965,7 @@ function generateMainPage(stage) {
         
         let ntqrBtn = document.createElement("button");
         ntqrBtn.setAttribute("id", "ntqrBtn");
-        ntqrBtn.innerHTML = "<a onClick= “javascript:JavaScript_Function()”>Open QR</a>";
+        ntqrBtn.innerHTML = "<a onClick= “javascript:openDivContentInNewTab()”>Open QR</a>";
         ntqrBtn.addEventListener("click", openDivContentInNewTab);
         startContainer.appendChild(ntqrBtn);
 
@@ -1385,6 +1385,16 @@ function  transition(i) {
         generateMainPage("tele");
     }
     if (i == 4) {
+        notesToggled = false;
+        let removeElem = (settings.tele.length) * 3
+        for (let i = 0; i < removeElem; i++) {
+
+            mainPageElem = document.getElementById("mainPage");
+            mainPageElem.removeChild(mainPageElem.lastElementChild)
+        }
+        generateMainPage("after");
+    }
+    if (i == 5) {
         notesToggled = false;
         let removeElem = (settings.tele.length) * 3
         for (let i = 0; i < removeElem; i++) {
