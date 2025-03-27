@@ -1589,12 +1589,12 @@ document.getElementById("customStyleBtn").addEventListener("click", () => {
 
     }
 })
-
+/*
 document.getElementById("searchBtn").addEventListener("click", () => {
     document.getElementById("searchPage").style.display = "flex";
     document.getElementById("initPage").style.display = "none";
 })
-
+*/
 document.getElementById("searchReturn").addEventListener("click", () => {
     document.getElementById("searchPage").style.display = "none";
     document.getElementById("initPage").style.display = "flex";
